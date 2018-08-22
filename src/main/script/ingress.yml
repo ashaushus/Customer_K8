@@ -3,9 +3,6 @@ kind: Ingress
 metadata:
   name: gateway-ingress
 spec:
-  backend:
-    serviceName: default-http-backend
-    servicePort: 80
   rules:
   - host: micro.all
     http:
