@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: customer-service
-        image: piomin/customer-service:1.1
+        image: ashaushus/mycustomer:v2
         ports:
         - containerPort: 3333
           protocol: TCP

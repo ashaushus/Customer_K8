@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: account-service
-        image: piomin/account-service
+        image: ashaushus/myaccount:v3
         ports:
         - containerPort: 2222
           protocol: TCP
