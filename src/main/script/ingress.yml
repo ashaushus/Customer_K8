@@ -4,9 +4,10 @@ metadata:
   name: gateway-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
+    ingress.kubernetes.io/service-upstream: "true"
 spec:
   backend:
-    serviceName: default-http-backend
+    serviceName: ghost
     servicePort: 80
   rules:
   - host: micro.all
@@ -16,6 +17,9 @@ spec:
         backend:
           serviceName: account-service
           servicePort: 2222
+  - host: micro.all
+    http:
+      paths:
       - path: /customer
         backend:
           serviceName: customer-service
