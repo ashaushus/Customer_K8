@@ -2,35 +2,39 @@ package com.mindtree.kubeproject.microservices.customer.model;
 
 import java.util.List;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import javax.persistence.*;
 
-@Document(collection = "customer")
+@Entity
+@Table(name= "customer")
 public class Customer {
 
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String pesel;
     private String name;
+    @Enumerated(EnumType.STRING)
     private CustomerType type;
-    private List<Account> accounts;
+    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "account_id", nullable = false)
+    private Account account;
 
     public Customer() {
 
     }
 
-    public Customer(String id, String pesel, String name, CustomerType type) {
+    public Customer(Long id, String pesel, String name, CustomerType type) {
         this.id = id;
         this.pesel = pesel;
         this.name = name;
         this.type = type;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -58,12 +62,12 @@ public class Customer {
         this.type = type;
     }
 
-    public List<Account> getAccounts() {
-        return accounts;
+    public Account getAccount() {
+        return account;
     }
 
-    public void setAccounts(List<Account> accounts) {
-        this.accounts = accounts;
+    public void setAccount(Account account) {
+        this.account = account;
     }
 
 }

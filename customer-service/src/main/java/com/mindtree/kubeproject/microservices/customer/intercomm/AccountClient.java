@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.mindtree.kubeproject.microservices.customer.model.Account;
 
-@FeignClient(name="account-service", url="http://account-service:2222")
+@FeignClient(name="account-service", url="http://localhost:2222")
 public interface AccountClient {
 
     @RequestMapping(method = RequestMethod.GET, value = "/accounts/customer/{customerId}")
-    List<Account> getAccounts(@PathVariable("customerId") Integer customerId);
+    Account getAccounts(@PathVariable("customerId") Long customerId);
 
 }

@@ -13,12 +13,12 @@ spec:
     spec:
       containers:
       - name: customer-service
-        image: ashaushus/mycustomer:v2
+        image: ashaushus/mycustomer:v3
         ports:
         - containerPort: 3333
           protocol: TCP
-      - name: mongo
-        image: library/mongo
-        ports:
-        - containerPort: 27017
-          protocol: TCP
+      - name: postgres
+          image: postgres:10.4
+          imagePullPolicy: "IfNotPresent"
+          ports:
+          - containerPort: 5432

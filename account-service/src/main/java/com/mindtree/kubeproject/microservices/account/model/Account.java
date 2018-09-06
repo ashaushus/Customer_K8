@@ -1,47 +1,49 @@
 package com.mindtree.kubeproject.microservices.account.model;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import javax.persistence.*;
 
-@Document(collection = "account")
+@Entity
+@Table(name="account")
 public class Account {
 
     @Id
-    private String id;
-    private String customerId;
-    private String number;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    @Column(name="customerid")
+    private Long customerId;
+    private int number;
 
     public Account() {
 
     }
 
-    public Account(String id, String customerId, String number) {
+    public Account(Long id, Long customerId, int number) {
         this.id = id;
         this.customerId = customerId;
         this.number = number;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getCustomerId() {
+    public Long getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(String customerId) {
+    public void setCustomerId(Long customerId) {
         this.customerId = customerId;
     }
 
-    public String getNumber() {
+    public int getNumber() {
         return number;
     }
 
-    public void setNumber(String number) {
+    public void setNumber(int number) {
         this.number = number;
     }
 
