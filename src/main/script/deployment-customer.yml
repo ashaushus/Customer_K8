@@ -18,7 +18,8 @@ spec:
         - containerPort: 3333
           protocol: TCP
       - name: postgres
-          image: postgres:10.4
-          imagePullPolicy: "IfNotPresent"
-          ports:
+        image: postgres:10.4
+        imagePullPolicy: "IfNotPresent"
+        ports:
           - containerPort: 5432
+            protocol: TCP
