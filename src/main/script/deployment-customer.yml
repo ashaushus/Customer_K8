@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: customer-service
-        image: ashaushus/mycustomer:v3
+        image: ashaushus/mycustomer:v7
         ports:
         - containerPort: 3333
           protocol: TCP

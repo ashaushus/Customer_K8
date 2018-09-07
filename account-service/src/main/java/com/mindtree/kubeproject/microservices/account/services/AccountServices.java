@@ -24,7 +24,6 @@ public class AccountServices {
 
     public List<Account> findByCustomerId(Long customerId) {
         return accountRepository.findByCustomerId(customerId);
-
     }
 
     public Object findAll() {

@@ -1,2 +1,31 @@
 server:
   port: ${PORT:2222}
+
+spring:
+  application:
+    name: account-service
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    platform: postgres
+    username: postgres
+    password: mysecretpassword
+
+---
+spring:
+  profiles: local
+  datasource:
+    url: jdbc:postgresql://172.19.72.112:5432/postgres
+    username: postgres
+    password: mysecretpassword
+    driver-class-name: org.postgresql.Driver
+
+
+---
+spring:
+  profiles: gcp
+  datasource:
+    url: jdbc:postgresql://google/postgres?useSSL=false&socketFactoryArg=asha-thd:us-central1:postgres&socketFactory=com.google.cloud.sql.postgres.SocketFactory&user=%user%&password=%password%
+    username: postgres
+    password: mysecretpassword
+    driver-class-name: org.postgresql.Driver

@@ -1,4 +1,11 @@
 FROM openjdk:alpine
-ADD target/customer-service.jar customer-service.jar
-ENTRYPOINT ["java", "-jar", "/customer-service.jar"]
+RUN apk add --no-cache bash
+ARG profile
+ENV SPRING_PROFILE ${profile}
+
+COPY scripts/docker-entrypoint.sh entrypoint.sh
+COPY target/customer-service.jar app.jar
+
 EXPOSE 3333
+
+ENTRYPOINT ["./entrypoint.sh"]

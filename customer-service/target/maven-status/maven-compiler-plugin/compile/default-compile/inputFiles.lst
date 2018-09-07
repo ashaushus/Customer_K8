@@ -1,0 +1,8 @@
+/Users/axr8231/workspace/Customer_K8/customer-service/src/main/java/com/mindtree/kubeproject/microservices/customer/model/Customer.java
+/Users/axr8231/workspace/Customer_K8/customer-service/src/main/java/com/mindtree/kubeproject/microservices/customer/intercomm/AccountClient.java
+/Users/axr8231/workspace/Customer_K8/customer-service/src/main/java/com/mindtree/kubeproject/microservices/customer/controller/Api.java
+/Users/axr8231/workspace/Customer_K8/customer-service/src/main/java/com/mindtree/kubeproject/microservices/customer/model/CustomerType.java
+/Users/axr8231/workspace/Customer_K8/customer-service/src/main/java/com/mindtree/kubeproject/microservices/customer/repository/CustomerRepository.java
+/Users/axr8231/workspace/Customer_K8/customer-service/src/main/java/com/mindtree/kubeproject/microservices/customer/model/Account.java
+/Users/axr8231/workspace/Customer_K8/customer-service/src/main/java/com/mindtree/kubeproject/microservices/customer/Application.java
+/Users/axr8231/workspace/Customer_K8/customer-service/src/main/java/com/mindtree/kubeproject/microservices/customer/services/CustomerServices.java
