@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: account-service
-        image: ashaushus/myaccount:v10
+        image: ashaushus/myaccount:v11
         ports:
         - containerPort: 2222
           protocol: TCP
