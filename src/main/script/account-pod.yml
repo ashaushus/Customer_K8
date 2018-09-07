@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: account-svc-pod
+  labels:
+    name: account-svc-pod
+    app: demo-customer-app
+spec:
+      containers:
+      - name: account-app
+        image: ashaushus/myaccount:v11
+        ports:
+        - containerPort: 80

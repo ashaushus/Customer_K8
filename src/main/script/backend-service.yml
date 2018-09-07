@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: postgres
+  labels:
+    name: postgres-svc
+    app: demo-customer-app
+spec:
+  ports:
+  - port: 5432
+    targetPort: 5432
+  selector:
+    name: postgres-pod
+    app: demo-customer-app
