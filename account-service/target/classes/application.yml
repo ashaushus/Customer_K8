@@ -26,7 +26,7 @@ spring:
 spring:
   profiles: gcp
   datasource:
-    url: jdbc:postgresql://google/postgres?useSSL=false&socketFactoryArg=shining-landing-195414:us-central1:postgres&socketFactory=com.google.cloud.sql.postgres.SocketFactory&user=%user%&password=%password%
+    url: jdbc:postgresql://35.238.60.18:5432/postgres
     driver-class-name: org.postgresql.Driver
     username: postgres
     password: mysecretpassword

@@ -8,6 +8,6 @@ metadata:
 spec:
       containers:
       - name: account-app
-        image: ashaushus/myaccount:v13
+        image: ashaushus/myaccount:v14
         ports:
         - containerPort: 2222
